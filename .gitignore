@@ -8,8 +8,8 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 
-#executables and libraries
-SCConsole
+#executables
+#SCConsole/bin
 
 CMakeCCompilerId.c
 CMakeCache.txt
