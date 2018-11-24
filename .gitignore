@@ -1,0 +1,64 @@
+MakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+
+#executables and libraries
+SCConsole
+
+CMakeCCompilerId.c
+CMakeCache.txt
+CMakeCXXCompilerId.cpp
+*.out
+*.cmake
+*.bin
+CMakeDirectoryInformation.cmake
+*.log
+Makefile.cmake
+Makefile2
+TargetDirectories.txt
+cmake.check_cache
+feature_tests.bin
+feature_tests.c
+feature_tests.cxx
+progress.marks
+
+
+sites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.append
+
