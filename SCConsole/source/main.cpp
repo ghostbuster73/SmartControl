@@ -7,10 +7,10 @@
 #include <thread>
 #include <iterator>
 #include "exprtk.hpp"
-#include "tinyxml2.h"
 
 #include <boost/numeric/odeint.hpp>
 #include <cmath>
+#include "tinyxml2.h"
 
 using Variables = exprtk::symbol_table<double>;
 using Formula = exprtk::expression<double>;
@@ -87,20 +87,31 @@ int main (int argc, char * argv[])
     // auto result = solver.solve(2.0, step);
     // std::cout<< "The solution with CustomSolver at 2.0 is " << result << std::endl;
 
-    auto correctColution = std::exp(pow(2, 2)) / 2;
+    // auto correctColution = std::exp(pow(2, 2)) / 2;
 
 
 
 
-    auto cur_x = m_x;
-    for (double cur_t = t; cur_t <= 2; cur_t += step) {
-        cur_x = runge_kutta_step(cur_x, cur_t, step);
-    }
+    // auto cur_x = m_x;
+    // for (double cur_t = t; cur_t <= 2; cur_t += step) {
+    //     cur_x = runge_kutta_step(cur_x, cur_t, step);
+    // }
 
-    std::cout << "Manual Runge-Kutta at point 2 is " << cur_x << std::endl;
-    std::cout << "The right solution is " << correctColution << std::endl;
+    // std::cout << "Manual Runge-Kutta at point 2 is " << cur_x << std::endl;
+    // std::cout << "The right solution is " << correctColution << std::endl;
 
-    // tinyxml2::XMLDocument printer;
+    std::string taskPath;
+
+    std::cout<<"Enter path to task:"<<std::endl;
+    std::cin>>taskPath;
+
+     tinyxml2::XMLDocument doc;
+     doc.LoadFile(taskPath.c_str());
+
+     tinyxml2::XMLText * equation = doc.FirstChildElement("equation")->FirstChildElement("formula")->FirstChild()->ToText();
+
+     std::cout<<equation->Value()<<std::endl;
+
 
     return 0;
 }

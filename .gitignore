@@ -9,7 +9,7 @@ compile_commands.json
 CTestTestfile.cmake
 
 #executables
-#SCConsole/bin
+#SCConsole/bin/SCConsole
 
 CMakeCCompilerId.c
 CMakeCache.txt
