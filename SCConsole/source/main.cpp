@@ -1,13 +1,13 @@
 #include <memory>
 #include <algorithm>
 #include <vector>
-#include "lib.h"
 #include "expression.h"
 #include "phase_expression.h"
 #include "phase_solver.h"
 #include <thread>
 #include <iterator>
 #include "exprtk.hpp"
+#include "tinyxml2.h"
 
 #include <boost/numeric/odeint.hpp>
 #include <cmath>
@@ -99,6 +99,8 @@ int main (int argc, char * argv[])
 
     std::cout << "Manual Runge-Kutta at point 2 is " << cur_x << std::endl;
     std::cout << "The right solution is " << correctColution << std::endl;
+
+    // tinyxml2::XMLDocument printer;
 
     return 0;
 }

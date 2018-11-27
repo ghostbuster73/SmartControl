@@ -10,7 +10,7 @@ include_directories(
     ${Boost_INCLUDE_DIR}
     include/
     include/expressions
-    include/ode_expressions
+    include/expressions/ode_expressions/
     include/solvers
     include/solvers/ode_solvers
     include/header_libs
@@ -26,8 +26,8 @@ set(HEADER
     )
 
 set(SOURCE
-    source/expressions/ode_expressions/expression.cpp
-    source/expressions/phase_expression.cpp
+    source/expressions/expression.cpp
+    source/expressions/ode_expressions/phase_expression.cpp
     source/solvers/ode_solvers/phase_solver.cpp
     source/solvers/ode_solvers/runge_kutta_solver.cpp
     )

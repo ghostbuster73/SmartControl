@@ -7,14 +7,21 @@ include_directories(
     ${Boost_INCLUDE_DIR}
     ${SCLib_SOURCE_DIR}/include
     ${SCLib_SOURCE_DIR}/include/expressions
+    ${SCLib_SOURCE_DIR}/include/header_libs
+    ${SCLib_SOURCE_DIR}/include/expressions/ode_expressions/
+    ${SCLib_SOURCE_DIR}/include/solvers/ode_solvers
+    $(tinyxml2_INCLUDE_DIR)
 )
 
 set(
     HEADER ${SCLib_SOURCE_DIR}/include
     ${SCLib_SOURCE_DIR}/include/expressions
+    ${SCLib_SOURCE_DIR}/include/expressions/ode_expressions/
+    ${SCLib_SOURCE_DIR}/include/solvers/ode_solvers
+    ${SCLib_SOURCE_DIR}/include/header_libs
     )
 set(SOURCE source/main.cpp)
 
 add_executable(${PROJECT_NAME} ${HEADER} ${SOURCE})
-target_link_libraries(${PROJECT_NAME} SCLib)
+target_link_libraries(${PROJECT_NAME} SCLib ${TINYXML2_LIBRARY})
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_11 cxx_std_14)
