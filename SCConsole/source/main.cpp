@@ -10,7 +10,6 @@
 
 #include <boost/numeric/odeint.hpp>
 #include <cmath>
-#include "tinyxml2.h"
 
 using Variables = exprtk::symbol_table<double>;
 using Formula = exprtk::expression<double>;
@@ -99,19 +98,6 @@ int main (int argc, char * argv[])
 
     // std::cout << "Manual Runge-Kutta at point 2 is " << cur_x << std::endl;
     // std::cout << "The right solution is " << correctColution << std::endl;
-
-    std::string taskPath;
-
-    std::cout<<"Enter path to task:"<<std::endl;
-    std::cin>>taskPath;
-
-     tinyxml2::XMLDocument doc;
-     doc.LoadFile(taskPath.c_str());
-
-     tinyxml2::XMLText * equation = doc.FirstChildElement("equation")->FirstChildElement("formula")->FirstChild()->ToText();
-
-     std::cout<<equation->Value()<<std::endl;
-
 
     return 0;
 }
