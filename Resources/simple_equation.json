@@ -1,0 +1,11 @@
+{
+    "control": {
+        "formula": "v0^2*t+v1*t+v2",
+        "parameters": [0, 1, 2],
+        "timeSwitches": [0.3]
+    },
+    "phase": {
+
+    },
+    "sopr": null
+}
