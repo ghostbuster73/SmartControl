@@ -7,6 +7,7 @@
 #include <thread>
 #include <iterator>
 #include "exprtk.hpp"
+#include "json.hpp"
 
 #include <boost/numeric/odeint.hpp>
 #include <cmath>
@@ -16,6 +17,8 @@ using Formula = exprtk::expression<double>;
 using Parser = exprtk::parser<double>;
 
 using state_type = std::vector<double>;
+
+using json = nlohmann::json;
 
 class CauchyProblem {
 
@@ -98,6 +101,8 @@ int main (int argc, char * argv[])
 
     // std::cout << "Manual Runge-Kutta at point 2 is " << cur_x << std::endl;
     // std::cout << "The right solution is " << correctColution << std::endl;
+
+    json a;
 
     return 0;
 }

@@ -18,6 +18,7 @@ include_directories(
 
 set(HEADER
     include/header_libs/exprtk.hpp
+    include/header_libs/json.hpp
     include/expressions/expression.h
     include/expressions/ode_expressions/phase_expression.h
     include/solvers/ode_solvers/phase_solver.h
